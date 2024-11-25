@@ -11,10 +11,8 @@ Gem::Specification.new do |gem|
 #   gem.description = %q{OmniAuth strategy for squarespace, see https://github.com/squarespace/omniauth-squarespace for examples and more information.}
   gem.license = 'MIT'
 
-  gem.files         = `git ls-files`.split("\n")
-  gem.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
-  gem.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
-  gem.require_paths = ["lib"]
+  gem.files         = Dir['lib/**/*.rb']
+  gem.require_paths = ['lib']
 
   gem.add_dependency 'omniauth', '~> 1.0'
   gem.add_dependency 'omniauth-oauth2', '~> 1.1'
